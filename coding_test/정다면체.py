@@ -27,3 +27,7 @@ for i in range(len(cnt)):
 for i in range(len(cnt)):
     if target == cnt[i]:
         print(cnt[i])
+
+
+# 문제점
+# 없음.
