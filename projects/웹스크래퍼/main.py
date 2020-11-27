@@ -1,4 +1,0 @@
-from inflearn import extract_inflearn_pages ,extract_inflearn_lectures
-
-last_inflearn_pages=extract_inflearn_pages()
-all_inflearn_lectures=extract_inflearn_lectures(last_inflearn_pages)
