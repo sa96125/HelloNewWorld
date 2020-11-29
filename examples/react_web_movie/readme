@@ -1,3 +1,25 @@
 # Movie app 2020
 
-React.js fumdamental 
+React.js basic project - movie  
+
+* 설치파일(명령어)
+npm i npx // npx 설치
+npx create-react-app // 리액트는 모던한 언어라서 브라우저가 이해 못해서 babel이라던지 webpack이라던지 컴파일러 등등 올인원설치임.
+npm start
+npm i //문제 생기면 다시 설치하면 됨.
+npm i prop-types  // 프롭타입 체크해주는 플러그인
+
+
+* 프로젝트의 핵심
+React
+JSX 
+virtual DOM
+1종 object
+proptype
+key
+javascript format like {}
+react cycle
+
+
+* 기타 
+prettire edit-save true in Json. // 프리티어 저장할 때 코드 이쁘게 꾸며주는 기능
