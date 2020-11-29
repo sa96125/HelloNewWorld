@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import Movies from "./App4"
 
 class App3 extends React.Component {
     // 사용할 데이터들을  욧다가 넣는 구만~
@@ -13,7 +14,7 @@ class App3 extends React.Component {
     //ㅇㅋ 근데 뭘? awit 이하를 실행할 때 잠깐 기다려줘
     getMovies = async () => {
         // movies.data.movies  객체로 받으니까 그안의 프롭 안에 프롭안에 값을 es6에서 이렇게 표현.
-        const { data: { movies } } = await axios.get("https://yts-proxy.nomadcoders1.now.sh/list_movies.json");
+        const { data: { data: { movies } } } = await axios.get("https://yts-proxy.nomadcoders1.now.sh/list_movies.json");
         this.setState({ movies, isLoading: false });
     };
 
@@ -22,11 +23,15 @@ class App3 extends React.Component {
         //     this.setState({ isLoading: false });
         // }, 6000);
         this.getMovies();
-    }
+
+    };
 
     render() {
-        const { isLoading } = this.state;
-        return <div> {isLoading ? "Loading ... " : "We are ready"} </div>
+        const { isLoading, movies } = this.state;
+        return <div> {isLoading ? "Loading ... " : movies.map(movie => {
+            return <Movies key={movie.id} id={movie.id} year={movie.year} title={movie.title} summary={movie.summary} />
+        })} </div>;
+
     }
 }
 
