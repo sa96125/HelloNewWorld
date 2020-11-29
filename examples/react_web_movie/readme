@@ -9,6 +9,7 @@ npm start
 npm i //문제 생기면 다시 설치하면 됨.
 npm i prop-types  // 프롭타입 체크해주는 플러그인
 
+npm i axios
 
 * 프로젝트의 핵심
 React
@@ -21,5 +22,13 @@ javascript format like {}
 react cycle
 
 
+
 * 기타 
 prettire edit-save true in Json. // 프리티어 저장할 때 코드 이쁘게 꾸며주는 기능
+js 에서 데이터 다운할 때 보통 fetch() 사용하지만 여기에서는 Axios() 사용한다. (설치후 사용)
+json view // 브라우저 확장프로그램 json 파일 보기 좋게 보여준다.
+api endpoint 
+// 토렌토같은 불법경로로도 많이 이용하잔아. 마찬가지 api가 잘 개발되어 있어. 그거를 이용해서 영화리스트를 다운받아본다.
+// 그런데 이런 불법경로는 API가 자주 바뀐다. 
+
+
