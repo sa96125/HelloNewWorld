@@ -4,6 +4,7 @@ import Movies from "./App4"
 
 class App3 extends React.Component {
     // 사용할 데이터들을  욧다가 넣는 구만~
+    // 데이터를 할당하는 공간.
     state = {
         isLoading: true,
         movies: []
@@ -13,8 +14,9 @@ class App3 extends React.Component {
     //헤이 너 이거 언제 실행될지 모르겠는데 (비동기식)이 함수 실행 할 때 기다려야할 순간이 올거야. 괜찮??
     //ㅇㅋ 근데 뭘? awit 이하를 실행할 때 잠깐 기다려줘
     getMovies = async () => {
-        // movies.data.movies  객체로 받으니까 그안의 프롭 안에 프롭안에 값을 es6에서 이렇게 표현.
+        // data.data.movie  객체로 받으니까 그안의 프롭 안에 프롭안에 값을 es6에서 이렇게 표현.
         const { data: { data: { movies } } } = await axios.get("https://yts-proxy.nomadcoders1.now.sh/list_movies.json");
+        // 같으면 생략가능 movies = this.movies
         this.setState({ movies, isLoading: false });
     };
 

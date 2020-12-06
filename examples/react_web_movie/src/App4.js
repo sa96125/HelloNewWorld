@@ -13,5 +13,4 @@ Movies.prototype = {
     summary: PropTypes.string.isRequired,
 }
 
-
 export default Movies;

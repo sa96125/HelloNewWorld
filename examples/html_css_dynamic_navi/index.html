@@ -1,47 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dinamic_header</title>
 
-    <link rel="stylesheet" href="style.css" />
-    <!-- css연결 -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/9ed2a47d9d.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- 아이콘, 폰트 웹사이트에서 땡겨올려고 -->
-    <script src="main.js" defer></script>
-    <!-- 자바스크립트연결 -->
-  </head>
-  <body>
-    <nav class="navbar">
-      <div class="bar_logo">
-        <i class="fab fa-apple"></i>
-      </div>
-      <ul class="bar_menu">
-        <li><a href="">Mac</a></li>
-        <li><a href="">iPad</a></li>
-        <li><a href="">iPone</a></li>
-        <li><a href="">Watch</a></li>
-        <li><a href="">Music</a></li>
-        <li><a href="">Service</a></li>
-      </ul>
-      <ul class="bar_icons">
-        <li><i class="fas fa-search"></i></li>
-      </ul>
-      <a href="#" class="bar_togleBtn">
-        <i class="fas fa-bars"></i>
-      </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dinamic_header</title>
 
-      <!-- 링크(이동) 되는 것들은 전부 리스트 형식으로 -->
-      <!-- 버튼은 그냥 a태그로 -->
-    </nav>
-  </body>
+  <link rel="stylesheet" href="style.css" />
+  <!-- css연결 -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/9ed2a47d9d.js" crossorigin="anonymous"></script>
+  <!-- 아이콘, 폰트 웹사이트에서 땡겨올려고 -->
+  <script src="main.js" defer></script>
+  <script src="canvas.js" defer></script>
+  <!-- 자바스크립트연결 -->
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="bar_logo">
+      <i class="fab fa-apple"></i>
+    </div>
+    <ul class="bar_menu">
+      <li><a href="">Mac</a></li>
+      <li><a href="">iPad</a></li>
+      <li><a href="">iPone</a></li>
+      <li><a href="">Watch</a></li>
+      <li><a href="">Music</a></li>
+      <li><a href="">Service</a></li>
+    </ul>
+    <ul class="bar_icons">
+      <li><i class="fas fa-search"></i></li>
+    </ul>
+    <a href="#" class="bar_togleBtn">
+      <i class="fas fa-bars"></i>
+    </a>
+
+    <!-- 링크(이동) 되는 것들은 전부 리스트 형식으로 -->
+    <!-- 버튼은 그냥 a태그로 -->
+  </nav>
+  <canvas></canvas>
+</body>
+
 </html>

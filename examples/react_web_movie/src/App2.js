@@ -21,15 +21,12 @@ class App2 extends React.Component {
     constructor() {
         console.log("첫 번째로 발생 -> 렌더링")
     }
-
     componentDidMount() {
         console.log("두 번째로 발생 -> 랜더링")
     }
-
     componentDidUpdate() {
         console.log("세 번째로 발생 -> 랜더링")
     }
-
     componentWillUnmount() {
         console.log("마지막으로 발생 -> 랜더링")
     }

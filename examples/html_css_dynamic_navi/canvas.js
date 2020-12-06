@@ -1,7 +1,8 @@
 
 var canvas = document.querySelector("canvas");
+
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.height = window.innerHeight - 63;
 var pen = canvas.getContext('2d');
 
 var mouse = {
@@ -10,11 +11,11 @@ var mouse = {
 }
 
 var colorAraay = [
-    'pink',
-    'red',
-    'skyblue',
-    'black',
-    'green'
+    '#ef9a9a',
+    '#ffcccb',
+    '#ba6b6c',
+    '#ef5350',
+    '#b61827'
 ]
 
 var maxradius = 40;
@@ -22,13 +23,13 @@ var minradius = 10;
 
 window.addEventListener('resize', function (event) {
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.height = window.innerHeight - 63;
     init();
 })
 
 window.addEventListener('mousemove', function (event) {
     mouse.x = event.x;
-    mouse.y = event.y;
+    mouse.y = event.y - 63;
 })
 
 function Circle(x, y, dx, dy, radius) {
@@ -55,7 +56,7 @@ function Circle(x, y, dx, dy, radius) {
         if (this.x + this.radius > innerWidth || this.x - this.radius < 0) {
             this.dx = -this.dx;
         }
-        if (this.y + this.radius > innerHeight || this.y - this.radius < 0) {
+        if (this.y + this.radius > canvas.height || this.y - this.radius < 0) {
             this.dy = -this.dy;
         }
         this.x += this.dx;
@@ -67,6 +68,9 @@ function Circle(x, y, dx, dy, radius) {
             }
         } else if (this.radius > this.minradius) {
             this.radius -= 1;
+        } else if (mouse.x === 0 || mouse.x === canvas.width || mouse.y === 0 || mouse.y === canvas.height) {
+            mouse.x = undefined;
+            mouse.y = undefined;
         }
     }
 }
@@ -86,15 +90,14 @@ function init() {
 
     for (var i = 0; i < 300; i++) {
         var x = Math.random() * (innerWidth - (radius * 2)) + radius;
-        var y = Math.random() * (innerHeight - (radius * 2)) + radius;
+        var y = Math.random() * (canvas.height - (radius * 2)) + radius;
         var dx = (Math.random() - 0.5) * 5;
         var dy = (Math.random() - 0.5) * 5;
-        var radius = Math.random() * 10 + 10;
+        var radius = 20//Math.random() * 10 + 10;
         circleArray.push(new Circle(x, y, dx, dy, radius));
     }
 
-}
-
+} ß
 
 var circleArray = [];
 init();
