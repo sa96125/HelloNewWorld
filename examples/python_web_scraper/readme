@@ -1,0 +1,29 @@
+어떠한 사이트에 각페이지에 원하는 정보들을 스크래핑하는 기본적인 예제.
+
+다음과 같은 포인트를 배울 수 있다.
+1. 브라우저에 데이터(URL) :Request()
+2. JSON(.text)에서 HTML(document)파일로의 데이터 가공 :Beautifulsoup() 
+
+기능은 다음과 같다.
+- 배우고 싶은 과목중에 가장 최근의 관심있는 강의를 자동으로 불러와서 업데이트해서 보여준다.
+
+코드를 구성하는 과정은 다음과 같다.
+def extract_inflearn_pages():
+    result = requests.get(URL)
+    soup = BeautifulSoup(result.text, "html.parser")
+    pagination = soup.find("div", {"class": "pagination_container"})
+    links = pagination.find_all("li")
+
+    pages = []
+    for link in links:
+        pages.append(link.find("a").string)
+        max_page = int(pages[-1])
+    return max_page
+ 
+♦︎♦︎ HTML 구조를 알고 , 객체의 개념을 알고 다시 공부해보니 아주 쉽게 기능의 흐름을 알 수있었다.
+전체적인 흐름을 먼저알면 내가 원하는 강점을 찾아 발전할 수 있다고 말해준 니꼴라스 선생님에게 감사를 표한다.
+이전에는 정말 어렵게 느껴졌던 부분들이 한번의 스캔만으로 이해가 가능하니 뿌듯해지는 순간이다. 
+☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐
+
+
+
