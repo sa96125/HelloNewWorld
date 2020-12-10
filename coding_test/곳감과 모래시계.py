@@ -36,7 +36,7 @@ for i in range(n):
 
     else:
         for j in range(2*(i-n//2)+1):
-            total_fruit += board[i][n//2-(i-n//2)]
+            total_fruit += board[i][j-i+n]
 
 print(totalFruit)
 
