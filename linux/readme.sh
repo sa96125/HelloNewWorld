@@ -23,6 +23,24 @@ bash 리눅스에서 사용하는데 sh쉘에 있는 기능이 거의 포함되�
 
 
 
+****************** 다른 계정 수도계정 권한 주기 ******************************* 
+ncloud 접속후 , 다른계정으로 로그인해서 sudo bash하면 권한이 없어서 지정해줘야한다.
+/etc/hosts 같은거 수정할 때 고치는 권한이 없다. 팀원user한테 주고 싶을 때 사용.
+root계정에서.
+root>visudo
+	%wheel  ALL=(ALL)       ALL
+	%wheel  ALL=(ALL)       NOPASSWD: ALL
+    % 부분 제거
+root> usermod -aG wheel <user>
+root> exit
+하고 다시 접속하면 권한 생김
+
+$user> sudo bash
+$user> sudo vi /etc/hosts
+************************************************************************
+
+
+
 Linux File System Directories  Filesystem Hierarchy Standard
 /bin : 기본 명령어있음
 /boot : for booting
@@ -61,3 +79,11 @@ Linux Ports  IANA (Internet Assigned Numbers Authority)
 143  IMAP2/4
 993  IMAPS
 514  SysLog
+
+
+
+Command Line Tips
+>man ls  // 매뉴얼 도우미
+>touch // 작업시간대 변경됨 reload개념.
+>head 5  // 상단만 5줄만 보기
+>
