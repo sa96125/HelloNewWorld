@@ -1,4 +1,4 @@
-리눅스
+리눅스(서울진흥원 풀스택개발자 교육과정)
 
 1991, Linus Torvalds(Finn) from Unix
 Linux Distro
@@ -31,8 +31,8 @@ root>visudo
 	%wheel  ALL=(ALL)       ALL
 	%wheel  ALL=(ALL)       NOPASSWD: ALL
     % 부분 제거
-root> usermod -aG wheel <user>
-root> exit
+$> usermod -aG wheel <user>
+$> exit
 하고 다시 접속하면 권한 생김
 
 $user> sudo bash
@@ -41,16 +41,28 @@ $user> sudo vi /etc/hosts
 
 
 
+파일 압축
+$> gzip x.log         # x.log → x.log.gz
+$> gzip x.log.gz -d   # x.log.gz → x.log
+$> gzip x.log.gz -l   # compress status & list
+cf. xz(xz, J), bzip2(bz2, j)
+# windows 호환 zip (원본파일은 그대로 남김)
+$> zip x.log.zip x.log      <->   unzip x.log.zip
+$> zip -P "암호" x.zip x/*
+$> tar cvfz xxx.tar.gz *.log
+$> tar xvfz xxx.tar.gz
+
+
 Linux File System Directories  Filesystem Hierarchy Standard
 /bin : 기본 명령어있음
 /boot : for booting
-/dev : device file, cd-rom
-/etc : config, passwd, rc.d
+/dev : device file, cd-rom  #디바이스 마운팅
+/etc : config, passwd, rc.d #환경설정 비번파일
 /home : user home dir
 /lib : shared library
 /media : ssd
 /opt : application software package
-/proc : process info
+/proc : process info # 보통 프로세스가 실행되면 관련 디렉토리가 생긴다.
 /root : root home dir
 /sbin : 관리자용, ifconfig
 /srv : system data
@@ -59,11 +71,13 @@ Linux File System Directories  Filesystem Hierarchy Standard
 /usr/local
 /var : logs, ftp, spool, mail
 /lost+found
+$>cwd #현재 홈디렉토리 보기
+$>cat cpuinfo #cpu 몇개 붙어 있는지 볼 수 있다.  
 
 
 
 Linux Ports  IANA (Internet Assigned Numbers Authority)
-20  FTP (data)
+20  FTP (data) # 보안 쓰렉
 21  FTP (Control)
 22  SSH / rsync / rcp
 23  Telnet
@@ -83,7 +97,15 @@ Linux Ports  IANA (Internet Assigned Numbers Authority)
 
 
 Command Line Tips
->man ls  // 매뉴얼 도우미
->touch // 작업시간대 변경됨 reload개념.
->head 5  // 상단만 5줄만 보기
->
+$>man ls  # 매뉴얼 도우미
+$>touch  # 작업시간대 변경됨 reload개념.
+$>head 5  # 상단만 5줄만 보기
+$>ls -il # 디렉토리 트리구조잔아. 그러니까 디렉토리보다 인덱스 값이 있는데 그걸 볼수 있음.
+$>tail -f # 마지막 꺼 지속적으로 표시해줘 == more.less
+$>clear
+$>cat /etc/passwd # 유저목록 보기
+*************************************************************************
+# claer 안될때 설치
+$>yum install ncurses
+*************************************************************************
+
