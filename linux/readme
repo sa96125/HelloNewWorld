@@ -1,0 +1,63 @@
+리눅스
+
+1991, Linus Torvalds(Finn) from Unix
+Linux Distro
+ - Debian : Debian, Ubuntu, KNOPPIX(CD Linux)
+ - Red Hat : Fedora, RedHat Enterprise, CentOS, Vine Linux(Jp)
+ - Slackware: openSUSE(Novell), SUSE Linux Enterprise
+Kernel
+  - Management the Memory, File System, CPU, Device, etc.
+
+
+
+Manipulate Linux Kernel
+# Linux Shell Types
+ - sh (Bourne shell) : By Unix Shell, Super shell
+ - bash (Bourne-agin shell) : Super shell in Linux
+ - csh (C shell) : C like syntax
+ - tcsh (Enhanced-C shell): c
+ - ksh (korn shell) : by David Korn, Powerful Script Language
+ - zch (Z shell) : Unix/GNU shell script, Powerful Script Language
+sh 유닉스에서 사용하는 수퍼쉘
+bash 리눅스에서 사용하는데 sh쉘에 있는 기능이 거의 포함되어 있다.
+
+
+
+Linux File System Directories  Filesystem Hierarchy Standard
+/bin : 기본 명령어있음
+/boot : for booting
+/dev : device file, cd-rom
+/etc : config, passwd, rc.d
+/home : user home dir
+/lib : shared library
+/media : ssd
+/opt : application software package
+/proc : process info
+/root : root home dir
+/sbin : 관리자용, ifconfig
+/srv : system data
+/tmp : temporary dir
+/usr : source or programs
+/usr/local
+/var : logs, ftp, spool, mail
+/lost+found
+
+
+
+Linux Ports  IANA (Internet Assigned Numbers Authority)
+20  FTP (data)
+21  FTP (Control)
+22  SSH / rsync / rcp
+23  Telnet
+25  SMTP (Simple Mail Transfer)
+465 SMTPS 보안 메일 요청하는 포트
+43  whois
+53  DNS
+80   HTTP
+443  HTTPS
+110  POP3
+995  POP3S 보안 메일 받는 포트
+123  NTP (Network Time Protocol)
+143  IMAP2/4
+993  IMAPS
+514  SysLog
