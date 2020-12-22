@@ -7,7 +7,7 @@
 legnth_of_compare = 5
 cnt = 0
 
-board = [list(map(int, input().split)) for _ in range(7))]
+board = [list(map(int, input().split())) for _ in range(7)]
 
 for row in range(3):
     for col in range(3):
