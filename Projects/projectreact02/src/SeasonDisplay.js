@@ -1,4 +1,5 @@
 import React from 'react';
+import './SeasonDisplay.css';
 
 //
 const seasonConfig = {
@@ -29,10 +30,10 @@ const SeasonDisplay = (props) => {
     const { text, iconName } = seasonConfig[season];
     <i class="snowflake outline icon"></i>
     return (
-        <div>
-            <i className={`massive ${iconName} outline icon`} />
+        <div className={`season-display ${season}`}>
+            <i className={`icon-left massive ${iconName} outline icon`} />
             <h1>{text}</h1>
-            <i className={`massive ${iconName} outline icon`} />
+            <i className={`icon-right massive ${iconName} outline icon`} />
         </div>
     );
 };

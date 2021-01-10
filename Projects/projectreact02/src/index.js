@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SeasonDisplay from './SeasonDisplay';
+import Spinner from './Spinner';
 
 class App extends React.Component {
     // 스테이트 영역 설정 즉, 생성자영역에서 한번 값들이 할당 되는 객체
@@ -33,7 +34,7 @@ class App extends React.Component {
             return <SeasonDisplay lat={this.state.lat} />;
         }
 
-        return <div>is loding..</div>;
+        return <Spinner />;
     }
 }
 
