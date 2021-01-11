@@ -22,10 +22,8 @@ class App extends React.Component {
         // 이 함수가 변경한 값을 cdu함수가 바로 캐치해서 rerendering를 진행한다.
     }
 
-
-    // only set JSX
-    // 반드시 기본 리턴값을 가져야 한다.
-    render() {
+    // helper
+    renderContent() {
         if (this.state.errorMessage && !this.setState.lat) {
             return <div>Error : {this.state.errorMessage}</div>;
         }
@@ -35,6 +33,11 @@ class App extends React.Component {
         }
 
         return <Spinner message="Please accept location request!" />;
+    }
+    // only set JSX
+    // 반드시 기본 리턴값을 가져야 한다.
+    render() {
+        return this.renderContent();
     }
 }
 

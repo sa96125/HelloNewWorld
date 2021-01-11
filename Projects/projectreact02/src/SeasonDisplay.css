@@ -6,7 +6,7 @@
 }
 
 .season-display.winter i {
-  color: skyblue;
+  color: rgb(135, 206, 235);
 }
 
 .season-display.summer i {
@@ -26,7 +26,7 @@
 }
 
 .winter {
-  background-color: aliceblue;
+  background-color: rgb(240, 248, 255);
 }
 
 .summer {

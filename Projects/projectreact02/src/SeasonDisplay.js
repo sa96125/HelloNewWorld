@@ -1,7 +1,8 @@
 import React from 'react';
 import './SeasonDisplay.css';
+// 각 함수의 순서도 중요함. funcktion expreetion!
 
-//
+// 변수객체
 const seasonConfig = {
     summer: {
         text: '대프리카에 오신 것은 환영합니다.',
