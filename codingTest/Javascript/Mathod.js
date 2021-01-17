@@ -3,7 +3,7 @@ let nameString = '    my name is jake';
 
 nameString.toUpperCase();
 nameString.toLowerCase();
-//양끝 잘라버리기
+//양끝 s잘라버리기
 nameString.trim();
 nameString.indexOf('s');
 //0번째 인덱스 뺀 문자열
